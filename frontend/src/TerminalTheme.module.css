@@ -1,0 +1,70 @@
+/* TerminalTheme.module.css */
+
+.appContainer {
+  background-color: #000;
+  color: #39ff14;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Courier New", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.glow {
+  text-shadow: 0 0 2px #39ff14, 0 0 10px #39ff14;
+}
+
+.inputField,
+.selectField,
+.checkboxField,
+.button {
+  background-color: #000;
+  color: #39ff14;
+  border: 1px solid #39ff14;
+  font-family: "Courier New", monospace;
+}
+
+.inputField {
+  padding: 0.25rem;
+  margin-left: 1rem;
+  width: 4rem;
+}
+
+.selectField {
+  margin-left: 1rem;
+  padding: 0.25rem;
+}
+
+.checkboxField {
+  margin-right: 0.5rem;
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.terminalBox {
+  background-color: #000;
+  color: #39ff14;
+  padding: 1rem;
+  font-family: "Courier New", monospace;
+  border-radius: 6px;
+  margin-top: 2rem;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

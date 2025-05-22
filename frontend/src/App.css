@@ -1,0 +1,18 @@
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #39ff14;
+  font-family: "Courier New", monospace;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
