@@ -1,5 +1,7 @@
 # Quantum Key Distribution (BB84) Hacker Detection with AI
 
+![QKD BB84 Hacker Detection with AI](app_interface.png)
+
 A visually immersive simulation of the **BB84 Quantum Key Distribution** protocol, built with React and Flask. This app lets users:
 
 - Simulate quantum key exchanges between Alice and Bob
@@ -7,8 +9,6 @@ A visually immersive simulation of the **BB84 Quantum Key Distribution** protoco
 - Detect potential security breaches through error rates
 - Leverage **Qwen3 model (via Cerebras API)** to infer Eve’s strategy
 - Experience a retro terminal UI with typewriter animations
-
-![QKD BB84 Hacker Detection with AI](app_interface.png)
 
 ---
 
