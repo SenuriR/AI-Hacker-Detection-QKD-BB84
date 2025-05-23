@@ -53,6 +53,8 @@ def simulate_bb84(n, eve_strategy="intermediate"):
     error_rate = round((len(error_positions) / len(matching_indices)) * 100, 2) if matching_indices else 0
     is_secure = error_rate < SECURITY_THRESHOLD
 
+    _, match_rate = compute_match_rate(alice_bases, eve_bases)
+
     return {
         "alice_bits": alice_bits,
         "alice_bases": alice_bases,
@@ -62,7 +64,8 @@ def simulate_bb84(n, eve_strategy="intermediate"):
         "error_positions": error_positions,
         "error_rate": error_rate,
         "is_secure": is_secure,
-        "matching_indices": matching_indices
+        "matching_indices": matching_indices,
+        "match_rate": match_rate
     }
 
 
@@ -121,7 +124,6 @@ def generate():
     use_mock_mode = USE_MOCK if use_mock_override is None else use_mock_override
 
     sim_result = simulate_bb84(num_bits, eve_strategy)
-    _, match_rate = compute_match_rate(sim_result["alice_bases"], sim_result["eve_bases"])
 
     if use_mock_mode:
         eve_analysis = {
@@ -147,7 +149,7 @@ def generate():
                 Data from one simulation:
                 - Alice bases: {sim_result['alice_bases']}
                 - Eve bases: {sim_result['eve_bases']}
-                - Match rate: {match_rate}%
+                - Match rate: {sim_result['match_rate']}%
 
                 Based on this information, which strategy did Eve most likely use?
 

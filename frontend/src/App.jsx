@@ -67,7 +67,7 @@ export default function App() {
           checked={!useRealAI}
           onChange={() => setUseRealAI(prev => !prev)}
         />
-        Use Mock AI (No token usage)
+        Use Mock AI (Uncheck for Cerebras Qwen3 Model!)
       </label>
 
       <label>
@@ -131,6 +131,7 @@ export default function App() {
                 <TypedLine text={`Error Positions: ${result.error_positions.join(", ")}`} />
               </div>
               <div><TypedLine text={`Error Rate: ${result.error_rate}%`} /></div>
+              <div><TypedLine text={`Match Rate (Alice & Eve): ${result.match_rate}%`} /></div>
               <div><TypedLine text={`Secure? ${result.is_secure ? "YES" : "NO"}`} /></div>
             </>
           )}
